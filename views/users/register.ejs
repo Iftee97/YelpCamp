@@ -1,0 +1,53 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="container">
+  <div class="row">
+    <div class="mx-auto col-sm-10 col-md-8 col-lg-6">
+      <h1>Register</h1>
+
+      <form
+        class="needs-validation mt-3"
+        action="/register"
+        method="POST"
+        novalidate
+      >
+        <div class="mb-3">
+          <label class="form-label" for="email">Email</label>
+          <input
+            class="form-control"
+            type="email"
+            id="email"
+            name="email"
+            autofocus
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="username">Username</label>
+          <input
+            class="form-control"
+            type="text"
+            id="username"
+            name="username"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="password">Password</label>
+          <input
+            class="form-control"
+            type="password"
+            id="password"
+            name="password"
+            required
+          />
+        </div>
+
+        <button class="btn btn-success">Register</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<% layout('layouts/boilerplate')%>
+
+<!-- mapbox cluster map -->
+<div class="mb-3" id="cluster-map"></div>
+
+<h1 class="mb-3">All Campgrounds</h1>
+
+<div class="row">
+  <div class="col-6">
+    <input
+      class="form-control mb-5"
+      type="search"
+      id="searchbox"
+      placeholder="search a campground..."
+    />
+  </div>
+</div>
+
+<% for (let campground of campgrounds) { %>
+<div class="card mb-3 box">
+  <div class="row">
+    <div class="col-md-4">
+      <% if (campground.images.length) { %>
+      <!--  -->
+      <% const index = Math.floor(Math.random() * campground.images.length); %>
+      <img class="img-fluid" alt="" src="<%= campground.images[index].url %>" />
+      <% } else { %>
+      <p class="text-muted text-center">No image available</p>
+      <% } %>
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= campground.title %></h5>
+
+        <p class="card-text"><%= campground.description %></p>
+
+        <p class="card-text">
+          <small class="text-muted"><%= campground.location %></small>
+        </p>
+
+        <a class="btn btn-primary" href="/campgrounds/<%= campground._id %>"
+          >View <%= campground.title %></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<% }%>
+
+<script>
+  const campgrounds = {
+    features: <%- JSON.stringify(campgrounds) %>
+  };
+</script>
+
+<!-- cluster map script -->
+<script src="/javascripts/clusterMap.js"></script>
