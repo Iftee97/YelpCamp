@@ -9,3 +9,5 @@ git add .
 git commit -m ""
 
 git push heroku main
+
+git push origin main
