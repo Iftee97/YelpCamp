@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router({ mergeParams: true });
 const {
-  validateReview,
-  isLoggedIn,
-  isReviewAuthor,
+    validateReview,
+    isLoggedIn,
+    isReviewAuthor,
 } = require("../middlewares");
 const { createReview, deleteReview } = require("../controllers/reviews");
 

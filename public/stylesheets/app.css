@@ -1,19 +1,19 @@
 #cluster-map {
-  width: 100%;
-  height: 400px;
+    width: 100%;
+    height: 400px;
 }
 
 a[title="Mapbox"],
 a[title="OpenStreetMap"],
 a.mapbox-improve-map {
-  display: none;
+    display: none;
 }
 
 #map {
-  width: 100%;
-  height: 325px;
+    width: 100%;
+    height: 325px;
 }
 
 .is-hidden {
-  display: none;
+    display: none;
 }
