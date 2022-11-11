@@ -50,8 +50,8 @@ const campgroundSchema = new Schema(
 // the following code block is required for the popup on the map
 campgroundSchema.virtual("properties.popUpMarkup").get(function () {
     return `
-    <strong><a href="/campgrounds/${this._id}">${this.title}</a><strong>
-    <p>${this.location}</p>
+        <strong><a href="/campgrounds/${this._id}">${this.title}</a><strong>
+        <p>${this.location}</p>
     `;
 });
 
