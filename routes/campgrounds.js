@@ -15,7 +15,7 @@ const multer = require("multer");
 const { storage } = require("../cloudinary");
 const upload = multer({ storage });
 
-// routers
+// routes matching /
 router
     .route("/")
     .get(index)
@@ -26,8 +26,10 @@ router
         createCampground
     );
 
+// routes matching /new
 router.get("/new", isLoggedIn, renderNewForm);
 
+// routes matching /:id
 router
     .route("/:id")
     .get(showCampground)
