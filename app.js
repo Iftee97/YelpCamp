@@ -98,6 +98,10 @@ app.get("/", (req, res) => {
     res.render("home");
 });
 
+app.get("/api/hello", (req, res) => {
+    res.json({ message: "API is up and running" });
+});
+
 // 404 catch-all route middleware
 app.all("*", (req, res, next) => {
     next(new ExpressError("Page not found!", 404));
