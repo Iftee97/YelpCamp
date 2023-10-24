@@ -6,7 +6,7 @@ AFTER EVERY CHANGES MADE:
 
   git add .
 
-  git commit -m ""
+  git commit -m "some commit message"
 
   git push heroku main
 
@@ -18,4 +18,6 @@ AFTER EVERY CHANGES MADE:
 If you want to run the app locally on your computer:
 
 download the code and on powershell / git:
-  npm install or npm i 
+  - npm install or npm i 
+  - npm run start
+  
