@@ -73,3 +73,5 @@ seedDB()
     });
 
 // image: "https://source.unsplash.com/collection/483251",
+
+// run this code: node seeds/index.js
